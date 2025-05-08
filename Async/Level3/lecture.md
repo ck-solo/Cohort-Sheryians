@@ -11,3 +11,11 @@
 3. getcomments(postId) -> resolves  with comments.
 
 Chain them together using .then() and log the final output.  
+
+
+3. Fake API Delay
+// Task:
+
+Write a function fakeApiCall(endpoint) that:
+. Accept a string like "users" or "posts"
+. Resolves with some dummy data after a  random delay [1-3sec]
