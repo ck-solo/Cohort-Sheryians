@@ -63,7 +63,7 @@
 //     age: 23,
 //     city: "delhi"
 // }
-// Object.freeze(person) // Know you don't do any updataion and changes in the const objet;
+// Object.freeze(person) // Now you don't do any updataion and changes in the const objet;
 // person.age = 24;
 
 
