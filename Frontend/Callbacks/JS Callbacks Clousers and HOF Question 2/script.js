@@ -16,12 +16,47 @@
 // ans("Lucy") 
 // ans("raghav") 
 // ans("nancy") 
-
+ 
 // Q3. Implement a function that takes a callback and only executes it once (HOF + Closure).
-function once(val,time){ 
-    setTimeout(val, time);
+// function onetimeExecute(fn){
+//     let executed = false
+    
+//     return function(){
+
+//         if(!executed){
+//             executed= true
+//             fn() 
+//         }else{
+//             console.error("already executed")
+//         }
+//     }
+// }
+
+// var ansfn = onetimeExecute(function(){
+//     console.log("hello world")
+// })
+ 
+// ansfn()
+// ansfn()
+
+
+
+//Q4. Implement a function that throttles another function (HOF + Closures).
+function throttle(fn,delay){
+    let lastCall = 0;
+    return function(){
+        let now = Date.now()
+        if(now  - lastCall >= delay){
+            lastCall = now;
+            fn()
+        }else{
+            console.error("called too soon")
+        }
+    }
 }
 
-var ans = once(function(){
-    console.log("Hello")
-},3000)
+let callThrottle = throttle(function(){
+    console.log("hello world")
+},2000)
+
+callThrottle() 
