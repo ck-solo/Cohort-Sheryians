@@ -3,7 +3,7 @@ objects ko create krna jo sirf data hold na kre unki functionality ko bhi hold k
 
 
 use kese kre
-ek function banao aur use call krte hue new laga do. New lagane ke baad us funcrion ke andar ek imaginary container ban jauyega jisme object ko create krega aur usme jo bhi variable this.name ke use krega wo us object ke andar add hota jayega 
+ek function banao aur use call krte hue new laga do. New lagane ke baad us function ke andar ek imaginary container ban jauyega jisme object ko create krega aur usme jo bhi variable this.name ke use krega wo us object ke andar add hota jayega 
 
 function Biscutit(name, shape, color, flavour){
     this.name = name,
