@@ -19,3 +19,14 @@ like => console.log, settimeout , setinterval aise and for more just search wind
 ++++++++++++++++++++++++++++++++++++++
 
 callback queue => web api se complete hone pr code callback queue pr jata hai  
+
+++++++++++++++++++++++++++++++++++++++
+
+Microtask queue aur macrotask queue dono Event Loop ka part hote hain, lekin inki priority alag-alag hoti hai. Microtask queue me wo async tasks aate hain jo Promise se related hote hain, jaise then, catch, finally, ya queueMicrotask. Jab bhi JavaScript ka call stack empty hota hai, sabse pehle microtask queue poori ki poori empty hoti hai, uske baad hi koi aur kaam hota hai. Iska matlab microtasks ko sabse zyada priority milti hai.
+
+++++++++++++++++++++++++++++++++++++++
+
+Wahi macrotask queue me wo async tasks aate hain jo Web APIs / Browser APIs se aate hain, jaise setTimeout, setInterval, DOM events (click, scroll), etc. Event loop microtasks complete hone ke baad macrotask queue se sirf ek task uthata hai, phir dobara microtask queue check karta hai. Isi wajah se agar microtasks pending hain, to macrotasks wait karte rehte hain.
+
+++++++++++++++++++++++++++++++++++++++
+microtask queue high-priority hoti hai aur pehle execute hoti hai, jabki macrotask queue low-priority hoti hai aur microtasks ke baad execute hoti hai.
